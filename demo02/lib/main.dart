@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '不规则底部导航栏',
-      theme: ThemeData(
+      theme: ThemeData( // 自定义主题样本
         primarySwatch: Colors.lightBlue
       ),
       home: BottomNavigationWidget(),
