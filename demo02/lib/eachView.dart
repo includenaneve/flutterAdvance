@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class EachView extends StatefulWidget {
   String _title;
-  EachView(this._title);
+  int _imageIndex;
+  EachView(this._title, this._imageIndex);
   @override
   _EachViewState createState() => _EachViewState();
 }
@@ -13,7 +14,7 @@ class _EachViewState extends State<EachView> {
     return Scaffold(
       appBar: AppBar(title: Text(widget._title),),
       body: Center(
-        child: Text(widget._title),
+        child: Image.network('http://qiniu.liujiajian.top/penguin${widget._imageIndex}'),
       ),
     );
   }

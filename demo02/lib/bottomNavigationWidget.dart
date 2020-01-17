@@ -15,10 +15,10 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
   @override
   void initState() {
     super.initState();
-    _eachView = List();
-    _eachView
-      ..add(EachView('主页'))
-      ..add(EachView('飞行'));
+    _eachView = List(); // 新增一个数组
+    _eachView // 往数组添加两个元素
+      ..add(EachView('哥谭镇老大1', 4))
+      ..add(EachView('企鹅宝宝', 5));
   }
 
   @override
@@ -27,11 +27,16 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
       body: _eachView[_index],
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(
+          Navigator.push(context, MaterialPageRoute( // 新增页面
             builder: (BuildContext context) {
-              return EachView('New Page');
+              return EachView('你的新企鹅', 3);
             }
           ));
+          // Navigator.of(context).push(MaterialPageRoute( // 新增页面(写法2)
+          //   builder: (BuildContext context) {
+          //     return EachView('New Page');
+          //   }
+          // ));
         }, // 响应方式
         tooltip: '立即拍摄',
         child: Icon(
