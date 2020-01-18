@@ -44,13 +44,13 @@ class SecondPage extends StatelessWidget {
         title: Text('页面2', style: TextStyle(fontSize: 36.0),),
         backgroundColor: Colors.pink,
         leading: Container(),
-        elevation: 4.0,
+        elevation: 4.0, // appBar底部的boxShadow
       ),
       body: Center(
         child: MaterialButton(
           child: Icon(
-            Icons.navigate_before,
-            color: Colors.white,
+            Icons.navigate_before, 
+            color: Colors.white, 
             size: 64.0
           ),
           onPressed: () {
@@ -61,3 +61,4 @@ class SecondPage extends StatelessWidget {
     );
   }
 }
+
