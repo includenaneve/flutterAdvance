@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'customRouter.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({Key key}) : super(key: key);
@@ -20,12 +21,12 @@ class FirstPage extends StatelessWidget {
             size: 64.0
           ),
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(
-              builder: (BuildContext context) {
-                return SecondPage();
-              }
-            )
-          );
+            // Navigator.push(context, MaterialPageRoute( // 系统默认效果
+            //   builder: (BuildContext context) {
+            //     return SecondPage();
+            //   }
+            // ));
+            Navigator.push(context, CustomRouter(SecondPage())); // 自定义动画效果
           },
         ),
       ),
@@ -60,5 +61,5 @@ class SecondPage extends StatelessWidget {
       ),
     );
   }
-}
+}            
 
