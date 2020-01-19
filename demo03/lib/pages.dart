@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'customRouter.dart';
+import 'fadeRouter.dart';
+import 'scaleRouter.dart';
+import 'rotateScaleRouter.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({Key key}) : super(key: key);
@@ -26,7 +28,9 @@ class FirstPage extends StatelessWidget {
             //     return SecondPage();
             //   }
             // ));
-            Navigator.push(context, CustomRouter(SecondPage())); // 自定义动画效果
+            // Navigator.push(context, FadeRouter(SecondPage())); // 渐隐渐现
+            // Navigator.push(context, ScaleRouter(SecondPage())); // 放大缩小
+            Navigator.push(context, RoutateScaleRouter(SecondPage())); // 旋转放大缩小
           },
         ),
       ),
