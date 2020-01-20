@@ -29,8 +29,8 @@ class FirstPage extends StatelessWidget {
             //   }
             // ));
             // Navigator.push(context, FadeRouter(SecondPage())); // 渐隐渐现
-            // Navigator.push(context, ScaleRouter(SecondPage())); // 放大缩小
-            Navigator.push(context, RoutateScaleRouter(SecondPage())); // 旋转放大缩小
+            Navigator.push(context, ScaleRouter(SecondPage())); // 放大缩小
+            // Navigator.push(context, RoutateScaleRouter(SecondPage())); // 旋转放大缩小
           },
         ),
       ),
